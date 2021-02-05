@@ -52,11 +52,11 @@
                 <template v-else>
                   <input
                     class="todo-checkbox"
-                    v-bind:id="'item_' + item.id"
+                    :id="'item_' + item.id"
                     v-model="item.done"
                     type="checkbox"
                   />
-                  <label v-bind:for="'item_' + item.id"></label>
+                  <label :for="'item_' + item.id"></label>
                   <img
                     src="../src/assets/edit.svg"
                     alt="edit"
@@ -118,18 +118,17 @@ export default {
       todos: [
         {
           id: 0,
-          task: "Learn Node",
+          task: "Learn Vue",
           edit: false,
           done: false
         },
         {
           id: 1,
-          task: "Learn Loopback",
+          task: "Learn Javascript",
           edit: false,
           done: false
         }
       ],
-      // completedTodos: []
     };
   },
   mounted() {
@@ -295,7 +294,7 @@ h1 {
 
 .todo-wrapper {
   max-width: 100%;
-  min-height: 500px;
+  min-height: 400px;
   margin: 20px auto 40px;
   border: 1px solid #eee;
   border-radius: 4px;
